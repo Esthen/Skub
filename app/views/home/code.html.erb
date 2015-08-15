@@ -1,0 +1,9 @@
+<h1>Home#code</h1>
+<p>Find me in app/views/home/code.html.erb</p>
+
+<div class="access">
+  <%= form_for :sessioncode, :url => { :action => "session_upgrade"}, :html => {:method => 'GET'} do %>
+    <%= text_field_tag :key%>
+    <%= submit_tag %>
+  <% end %>
+</div>
