@@ -3,9 +3,15 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+def new
+  unless session.has_key?(:key) and session[:key] == 413
+    flash[:notice] = "Do not duck with me"
+    redirect_to root_path
+    #render plain: "GET LOST"
+  else
+    super
+  end
+end
 
   # POST /resource
   # def create
