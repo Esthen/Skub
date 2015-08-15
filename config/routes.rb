@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  # Home page where you can enter closed beta code. Only page accessible in 0.0001v
+  root 'home#code' #get 'home/code'
+
+# Fuck those routes
+  #get 'home/index'
+  #get 'home/show'
+
+  mount RailsAdmin::Engine => '/dbtrack', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
