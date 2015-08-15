@@ -10,6 +10,14 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+  <% if current_account %>
+    <%= link_to('Log out', destroy_account_session_path, :method => :delete) %> |
+    <%= link_to('Settings', edit_registration_path(:account)) %>
+  <% else %>
+    <%= link_to('Sign up', new_registration_path(:account)) %> |
+    <%= link_to('Sign in', new_session_path(:account)) %>
+  <% end %>
+
 <%= yield %>
 
 </body>

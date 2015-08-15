@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :accounts
+  devise_for :accounts, controllers: { sessions: "accounts/sessions" }
   # Home page where you can enter closed beta code. Only page accessible in 0.0001v
   root 'home#code' #get 'home/code'
   get 'up' => 'home#session_upgrade'
