@@ -46,6 +46,7 @@ group :development, :test do
 
 # Rails admin to keep track of databases while developpement
 gem 'rails_admin'
-
+# User accourts with devise
+gem 'devise'
 end
 
